@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 'Testing github action'
+      - name: 'Testing Github action'
         run: pwd
 
-      - name: 'Testing printing'
+      - name: 'Testing Printing'
         run: echo mojj
 
