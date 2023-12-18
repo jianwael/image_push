@@ -19,9 +19,5 @@ jobs:
               run: docker login --username $ {{secrets.DOCKER_USERNAME}} 
               
 
-            - name: "Bulding docker image"
-              run: docker build -t $ {{ secrets.DOCKER_USERNAME}}/jury .
-
-            - name: "Building docker image"
-              run: docker push $ {{ sectets.DOCKER_USERNAME }}/jury
+           
             
