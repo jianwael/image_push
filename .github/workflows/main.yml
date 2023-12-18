@@ -14,10 +14,9 @@ jobs:
 
         steps:
           - uses: actions/checkout@v3
-            with:
-                fetch-depth: 0
+            
           - name: "login to docker"
-            run: docker login --username $ {{secrete.DOCKER_USERNAME}} --password $ {{secrets.DOCKER_TOKEN}}
+            run: docker login --username ${{secrete.DOCKER_USERNAME}} --password ${{secrets.DOCKER_TOKEN}}
 
 
              
