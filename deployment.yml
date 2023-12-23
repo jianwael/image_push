@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: myapp
+
+spec:
+  selector:
+    matchLabels: 
+      app: my-web-app
+
+  replicas: 3
+  template: 
+    metadata: 
+      name: my-fist-pod
+      labels:
+        app: my-web-app
+    spec:
+      containers:
+        - name: custom-image
+          image: mojj2001/jury
+          imagePullPolicy: IfNotPresent
+       
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "1"
+            requests: 
+              memory: "100Mi"
