@@ -1,14 +1,15 @@
 apiVersion: v1
 kind: Pod
-metadata: 
+metadata:
   name: my-web-app
-  labels:
+  labels: 
     app: db
 spec:
   replicas: 3
   containers:
-    - name: my-nginx-app
+    - name:  my-nginx-app
       image: mojj2001/jury
       imagePullPolicy: IfNotPresent
       ports:
         - containerPort: 80
+   
